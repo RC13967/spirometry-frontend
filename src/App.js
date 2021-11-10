@@ -4,7 +4,7 @@ import { Line } from 'react-chartjs-2';
 function App() {
   const [spiroData, setSpiroData] = useState([])
   function getData() {
-    fetch("http://localhost:4000/getData", {
+    fetch("https://spirometry.herokuapp.com/getData", {
       method: "GET"
     })
       .then((data) => data.json())
