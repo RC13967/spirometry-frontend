@@ -199,7 +199,7 @@ function App() {
             <div className="container"> From the volume- time graph shown above,
               <ul><li>  Total volume expired, <b>FVC = 4.271</b></li>
                 <li>After 1 second from the start of flow i.e., at t = 1.180 seconds,  volume <b>FEV = 3.814</b>.</li>
-                <li>Therefore 	FEV/FVC = 3.814/4.271 = 0.8930. So, for the subject2, <b>FEV/FVC % = 89.30%</b></li></ul>
+                <li>Therefore FEV/FVC = 3.814/4.271 = 0.8930. So, for the subject2, <b>FEV/FVC % = 89.30%</b></li></ul>
               <div className="red">Interpretation: </div>
               <ul><li>The subject <b>doesn’t have obstructive lung disease</b> as FEV/FVC ratio is greater the lower limit for 
                 all people. So, the subject may have either obstructive lung disease or normal.</li>
@@ -216,7 +216,7 @@ function App() {
             <div className="container"> From the volume- time graph shown above,
               <ul><li>  Total volume expired, <b>FVC = 1.453</b></li>
                 <li>After 1 second from the start of flow i.e., at t = 1.184 seconds,  volume <b>FEV = 0.942</b>.</li>
-                <li>Therefore 	FEV/FVC = 0.942/1.453 = 0.6483. So, for the subject3, <b>FEV/FVC % = 64.83%</b></li></ul>
+                <li>Therefore	FEV/FVC = 0.942/1.453 = 0.6483. So, for the subject3, <b>FEV/FVC % = 64.83%</b></li></ul>
               <div className="red">Interpretation: </div>
               <ul><li>If the subject is adult Caucasian male aged 66-69 years and height greater than 150cm, FEV/FVC ratio
                  is greater than the lower limit of 0.63. But the FEV and FVC values are less than lower limit. So, the subject
