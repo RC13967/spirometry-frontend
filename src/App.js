@@ -11,7 +11,6 @@ function App() {
       .then((data) => data.json())
       .then((subjects) => setSpiroData(subjects))
   }
-
   useEffect(() => {
     getData()
   }, []);
