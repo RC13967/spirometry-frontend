@@ -185,7 +185,7 @@ function App() {
                 <li>Therefore FEV/FVC = 3.202/4.35 = 0.7361.So, for the subject1, <b>FEV/FVC % = 73.61%</b> which is less
                   than the normal value 83%.</li></ul>
               <div className="red">Interpretation: </div>
-              <ul><li>If the subject is female aged less than 25 and height greater than 195cm, the person has
+              <ul><li>If the subject is female aged 18-25 years and height greater than 195cm, the person has
                 <b> obstructive lung disease</b> as FEV/FVC ratio is less than the lower limit of 0.75.FEV and FVC values
                 are also less than lower limit (lower limits of FVC = 4.39, FEV = 3.86)</li>
                 <li>If the subject is adult male aged greater than 18, the person doesn’t have obstructive lung disease as
@@ -196,7 +196,7 @@ function App() {
                   18 years and height less than 165cm (lower limit of FEV/ FVC ratio = 0.71, FVC = 3.51, FEV = 3.04),
                   FEV/ FVC ratio is greater than the lower limit.FEV and FVC values are also greater than lower limit.
                   So, the subject <b>doesn’t have either restrictive or obstructive lung disease</b>.</li>
-                <li>If the subject is Caucasian male aged less than 25 years and height greater than 180cm, FEV/FVC ratio
+                <li>If the subject is Caucasian male aged 18-25 years and height greater than 180cm, FEV/FVC ratio
                   is less than the lower limit of 0.71.but FVC value is less than the lower limit of 4.38.
                   So, the subject has <b>restrictive lung disease</b>.FEV is also less than lower limit of 3.69.</li></ul>
             </div> : ""}
@@ -206,14 +206,15 @@ function App() {
                 <li>After 1 second from the start of flow i.e., at t = 1.180 seconds,  volume <b>FEV = 3.814</b>.</li>
                 <li>Therefore FEV/FVC = 3.814/4.271 = 0.8930. So, for the subject2, <b>FEV/FVC % = 89.30%</b></li></ul>
               <div className="red">Interpretation: </div>
-              <ul><li>The subject <b>doesn’t have obstructive lung disease</b> as FEV/FVC ratio is greater the lower limit for 
+              <ul><li>if the subject is an adult aged greater than 18 years, then the person
+                <b> doesn’t have obstructive lung disease</b> as FEV/FVC ratio is greater the lower limit for 
                 all people. So, the subject may have either obstructive lung disease or normal.</li>
                 <li>If the subject is adult Caucasian male aged greater than 62 years and height less than 195cm (lower limits
                    of FEV/ FVC = 0.64, FVC = 4.2, FEV = 3.17), or adult Caucasian male aged greater than 18 years and height less
                     than 175cm (lower limit of FEV/ FVC ratio = 0.71, FVC = 4.09, FEV = 3.47), FEV/ FVC ratio is greater than the 
                     lower limit. FEV and FVC values are also greater than lower limit. So, the subject <b>doesn’t have either
                      restrictive or obstructive lung disease</b>.</li>
-                <li>If the subject is Caucasian male aged less than 25 years and height greater than 185cm, FEV/FVC ratio is less
+                <li>If the subject is Caucasian male aged 18-25 years and height greater than 185cm, FEV/FVC ratio is less
                    than the lower limit of 0.71.but FVC value is less than the lower limit of 4.38. So, the subject has 
                    <b>restrictive lung disease.</b> FEV is normal.</li></ul>
             </div> : ""}
