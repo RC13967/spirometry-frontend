@@ -16,3 +16,7 @@ body{
 .red{
    color: red;
 }
+.loading{
+   text-align: center;
+   margin: 1rem;
+}

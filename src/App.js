@@ -1,14 +1,15 @@
 import './App.css';
 import { useEffect, useState } from "react";
 import { Line } from 'react-chartjs-2';
+import CircularProgress from '@mui/material/CircularProgress';
 function App() {
-  const [spiroData, setSpiroData] = useState([])
+  const [spiroData, setSpiroData] = useState([]);
   function getData() {
     fetch("https://spirometry.herokuapp.com/getData", {
       method: "GET"
     })
       .then((data) => data.json())
-      .then((subjects) => setSpiroData(subjects));
+      .then((subjects) => setSpiroData(subjects))
   }
 
   useEffect(() => {
@@ -127,9 +128,10 @@ function App() {
         Q. Can you comment on any disorders subject might have? Is the information available enough to differentiate
         between obstructive and restrictive lung diseases?
         <ul><li>As per European respiratory society, lower limit for FEV/FVC = 0.63, lower limit for FVC = 1.25, lower
-          limit for FEV = 0.98 in adult Caucasian males aged 66-69 years. For age group less than 66, these values will
-          be higher. For restrictive disorders, FEV/FVC ratio will be lower than 0.63. For obstructive disorder, FEV/FVC
-          ratio will be greater than or equal to 0.63. By comparing the predicted value with the obtained value in test,
+          limit for FEV = 0.98 in adult Caucasian males aged 66-69 years. For age group less than 66, these limits will
+          be higher. For restrictive disorders, FEV/FVC ratio will be greater than or equal to 0.63 and FVC values will be
+           less than lower limit. For obstructive disorder, FEV/FVC ratio will be less than 0.63 and FEV value will be
+           less than lower limit. By comparing the lower limits with the obtained value from the graph,
           we can comment on the lung disease. The information available is not sufficient to predict the lung diseases as
           we need the details of the person height, age, gender because the values are different for different type of
           people.</li></ul>
@@ -142,28 +144,31 @@ function App() {
       </div>
       {states.map((state, index) => <>
         <div className="subject-number">subject {Math.ceil((index + 1) / 2)}</div>
-        <div><Line
-          data={state}
-          options={{
-            scales: {
-              x: {
-                suggestedMax: 4,
-                title: {
-                  display: true,
-                  text: 'time (seconds)',
-                  fontSize: 20,
-                  color: 'blue',
-                },
-              }
-            },
-            plugins: {
-              legend: {
+        <div>
+          {!spiroData.sub1 ? 
+          <div className="loading">Please wait...<CircularProgress /></div>
+        :<Line
+        data={state}
+        options={{
+          scales: {
+            x: {
+              suggestedMax: 4,
+              title: {
                 display: true,
-                position: 'left',
-              }
+                text: 'time (seconds)',
+                fontSize: 20,
+                color: 'blue',
+              },
             }
-          }}
-        />
+          },
+          plugins: {
+            legend: {
+              display: true,
+              position: 'left',
+            }
+          }
+        }}
+      />}
           {index === 0 ?
             <div className="container">
               Flow started at t = 0.116 seconds (from the above flow-time graph).</div> : ""}
